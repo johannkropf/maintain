@@ -1,0 +1,29 @@
+<h1>Listing hwservicepositions</h1>
+
+<table>
+  <tr>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Amount</th>
+    <th>Period</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwservicepositions.each do |hwserviceposition| %>
+  <tr>
+    <td><%= hwserviceposition.start_date %></td>
+    <td><%= hwserviceposition.end_date %></td>
+    <td><%= hwserviceposition.amount %></td>
+    <td><%= hwserviceposition.period %></td>
+    <td><%= link_to 'Show', [@hwservice, hwserviceposition] %></td>
+    <td><%= link_to 'Edit', edit_hwservice_hwserviceposition_path(@hwservice, hwserviceposition) %></td>
+    <td><%= link_to 'Destroy', [@hwservice, hwserviceposition], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hw serviceposition', new_hwservice_hwserviceposition_path(@hwservice) %>

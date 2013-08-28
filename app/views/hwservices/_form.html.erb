@@ -1,0 +1,89 @@
+<%= form_for(@hwservice, :html => { :class => 'form-horizontal' }) do |f| %>
+  <% if @hwservice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwservice.errors.count, "error") %> prohibited this hwservice from being saved:</h2>
+
+      <ul>
+      <% @hwservice.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group" >
+    <%= f.label :ordernr, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ordernr, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :subordernr, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :subordernr, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :desc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :desc, :class => 'input-xxlarge' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :startdate, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :startdate, {}, {:class => 'date-select'}  %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :validity, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :validity, :class => 'input-small' %>
+      <span class="help-inline">  (Months)</span>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :vendor_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= collection_select(:hwservice, :vendor_id, Vendor.all, :id, :selectString, {}, {:class=>'input-xxlarge'}) %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :issue_date, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :issue_date, {}, {:class => 'date-select'} %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :period_of_notice, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :period_of_notice, :class => 'input-small' %>
+      <span class="help-inline">  (Months)</span>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :renewal_auto, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :renewal_auto, :class => 'input-small' %>
+      <span class="help-inline">  (Months)</span>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Save", :class => 'btn btn-primary' %>
+    <% if @hwservice.id.nil? %>
+      <%=link_to 'Cancel', hwservices_path, :class => 'btn' %>
+    <% else %>
+      <%= link_to 'Cancel', hwservice_path(@hwservice), :class => 'btn' %>
+    <% end %> 
+  </div>
+
+<% end %>

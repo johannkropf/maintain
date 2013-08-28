@@ -1,0 +1,59 @@
+<h1>Hardware Maintenance Contract</h1>
+<%= link_to 'Edit', edit_hwservice_path(@hwservice) %>
+or
+<%= link_to 'Delete', @hwservice, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<!-- 
+<p id="notice"><%= notice %></p>
+-->
+
+<dl class="dl-horizontal">
+  <dt>Ordernr:</dt>
+  <dd><%= @hwservice.ordernr %></dd>
+  <dt>Sub-Ordernr:</dt>
+  <dd><%= @hwservice.subordernr %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @hwservice.desc %></dd>
+  <dt>Startdate:</dt>
+  <dd><%= @hwservice.startdate %></dd>
+  <dt>Validity:</dt>
+  <dd><%= @hwservice.validity %> <small>(Months)</small></dd>
+  <dt>Valid until:</dt>
+  <dd><%= @hwservice.validuntil %></dd>
+
+  <dt>Vendor:</dt>
+  <dd><%= @hwservice.vendor_ident %>, 
+  <%= @hwservice.vendor_name1 %>, 
+  <%= @hwservice.vendor_location %></dd>
+  
+  <dt>Issue date:</dt>
+  <dd><%= @hwservice.issue_date %></dd>
+  <dt>Period of notice:</dt>
+  <dd><%= @hwservice.period_of_notice %> <small>(Months)</small></dd>
+  <dt>Auto renewal:</b>
+  <dd><%= @hwservice.renewal_auto %> <small>(Months)</small></dd>
+</dl>
+
+<hr>
+<h2>Service Positions</h2>
+<%= link_to 'New service position', new_hwservice_hwserviceposition_path(@hwservice) %>
+
+<p />
+<table class="table table-striped table-bordered table-condensed">
+
+ <tr>
+    <th>Hardware</th>
+    <th>Servicelevel</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Fee €</th>
+    <th>Period</th>
+    <th colspan="2">Actions</th>
+  </tr>
+  
+<%= render @hwservice.hwservicepositions %>
+</table>
+
+
+<br />

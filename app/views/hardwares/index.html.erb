@@ -1,0 +1,30 @@
+<h1>Hardware</h1>
+
+<%= link_to 'New Hardware', new_hardware_path %>
+<p />
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Type</th>
+    <th>Model</th>
+    <th>Serialnr</th>
+    <th>Desc</th>
+    <th>Location</th>
+    <th colspan="2">Actions</th>
+  </tr>
+
+<% @hardwares.each do |hardware| %>
+  <tr>
+    <td><%= hardware.typehw %></td>
+    <td><%= hardware.model %></td>
+    <td><%= hardware.serialnr %></td>
+    <td><%= hardware.desc %></td>
+    <td><%= hardware.location %></td>
+    <td><%= link_to 'Edit', edit_hardware_path(hardware) %></td>
+    <td><%= link_to 'Delete', hardware, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

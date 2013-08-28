@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Level:</b>
+  <%= @servicelevel.level %>
+</p>
+
+<p>
+  <b>Short desc:</b>
+  <%= @servicelevel.short_desc %>
+</p>
+
+<p>
+  <b>Long desc:</b>
+  <%= @servicelevel.long_desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_servicelevel_path(@servicelevel) %> |
+<%= link_to 'Back', servicelevels_path %>

@@ -1,0 +1,15 @@
+<p>
+<b><%= @hwservice.ordernr %> / <%= @hwservice.subordernr %> </b>
+<br>
+<small><%= @hwservice.desc %>
+<br>
+<%= @hwservice.vendor_ident %>, <%= @hwservice.vendor_name1 %>, <%= @hwservice.vendor_location %>
+</small></p>
+
+<legend>New Service Position</legend>
+
+<%= render 'form' %>
+
+<!--
+<%= link_to 'Back', hwservicepositions_path %>
+-->

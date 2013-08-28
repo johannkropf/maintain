@@ -1,0 +1,13 @@
+
+<tr>
+  <td><%= hwserviceposition.hardware_typehw + " " + hwserviceposition.hardware_model + " " + hwserviceposition.hardware_desc %></td>
+  <td><%= hwserviceposition.servicelevel_level + " " + hwserviceposition.servicelevel_short_desc %></td>
+  <td><%= hwserviceposition.start_date %></td>
+  <td><%= hwserviceposition.end_date %></td>
+  <td><%= hwserviceposition.amount %></td>
+  <td><%= hwserviceposition.period %></td>
+  <td><%= link_to 'Edit', edit_hwservice_hwserviceposition_path(@hwservice, hwserviceposition) %></td>
+  <td><%= link_to 'Delete', [@hwservice, hwserviceposition], method: :delete, data: { confirm: 'Are you sure you want to delete this position?' } %></td>
+</tr>
+
+

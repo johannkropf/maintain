@@ -1,0 +1,68 @@
+<%= form_for(@vendor, :html => { :class => 'form-horizontal' }) do |f| %>
+  <% if @vendor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vendor.errors.count, "error") %> prohibited this vendor from being saved:</h2>
+
+      <ul>
+      <% @vendor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label "Vendor Code", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :vendor_id, :class => 'text_field' %>
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :name1, :class => 'control-label'  %>
+    <div class="controls">
+      <%= f.text_field :name1, :class => 'input-xxlarge' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :name2, :class => 'control-label'  %>
+    <div class="controls">
+      <%= f.text_field :name2, :class => 'input-xxlarge' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :street, :class => 'control-label'  %>
+    <div class="controls">
+      <%= f.text_field :street, :class => 'input-xxlarge' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :zip, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :zip %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :location, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :location, :class => 'input-xxlarge' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :nationality, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nationality, :class => 'input-xxlarge' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Save", :class => 'btn btn-primary' %>
+    <%=link_to 'Cancel', vendors_path, :class => 'btn' %>
+  </div>
+
+<% end %>

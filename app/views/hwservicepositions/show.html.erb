@@ -1,0 +1,40 @@
+<h1>Service Position ID: <%= @hwserviceposition.id %></h1>
+
+<%= link_to 'Edit', edit_hwservice_hwserviceposition_path(@hwservice, @hwserviceposition) %>
+or
+<%= link_to 'Delete', [@hwservice, @hwserviceposition], method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start date:</b>
+  <%= @hwserviceposition.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @hwserviceposition.end_date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @hwserviceposition.amount %>
+</p>
+
+<p>
+  <b>Period:</b>
+  <%= @hwserviceposition.period %>
+</p>
+
+<p>
+  <b>Hardware_ID:</b>
+  <%= @hwserviceposition.hardware_id %>
+</p>
+
+<p>
+  <b>Servicelevel_ID:</b>
+  <%= @hwserviceposition.servicelevel_id %>
+</p>
+
+<hr> 
+<%= link_to 'Back', hwservice_path(@hwservice) %>

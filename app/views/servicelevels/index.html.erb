@@ -1,0 +1,26 @@
+<h1>Servicelevels</h1>
+
+<%= link_to 'New Servicelevel', new_servicelevel_path %>
+<p />
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Level Code</th>
+    <th>Short desc</th>
+    <th>Long desc</th>
+    <th colspan="2">Actions</th>
+  </tr>
+
+<% @servicelevels.each do |servicelevel| %>
+  <tr>
+    <td><%= servicelevel.level %></td>
+    <td><%= servicelevel.short_desc %></td>
+    <td><%= servicelevel.long_desc %></td>
+    <td><%= link_to 'Edit', edit_servicelevel_path(servicelevel) %></td>
+    <td><%= link_to 'Delete', servicelevel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

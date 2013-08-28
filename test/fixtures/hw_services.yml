@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ordernr: MyString
+  subordernr: MyString
+  startdate: 2013-07-16
+  validity: 1
+  supplier_nr: MyString
+  issue_date: 2013-07-16
+  period_of_notice: 1
+  renewal_auto: 1
+
+two:
+  ordernr: MyString
+  subordernr: MyString
+  startdate: 2013-07-16
+  validity: 1
+  supplier_nr: MyString
+  issue_date: 2013-07-16
+  period_of_notice: 1
+  renewal_auto: 1

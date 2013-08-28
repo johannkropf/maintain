@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  level: MyString
+  short_desc: MyString
+  long_desc: MyString
+
+two:
+  level: MyString
+  short_desc: MyString
+  long_desc: MyString

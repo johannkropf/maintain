@@ -1,0 +1,40 @@
+<%= form_for(@servicelevel, :html => { :class => 'form-horizontal' }) do |f| %>
+  <% if @servicelevel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@servicelevel.errors.count, "error") %> prohibited this servicelevel from being saved:</h2>
+
+      <ul>
+      <% @servicelevel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label "Level Code",  :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :level, :class => 'input-small' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :short_desc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :short_desc, :class => 'input-xlarge' %>
+    </div>  
+  </div>
+
+  <div class="control-group">
+    <%= f.label :long_desc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :long_desc, :rows => 7, :class => 'input-xxlarge' %>
+    </div>  
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Save", :class => 'btn btn-primary' %>
+    <%=link_to 'Cancel', servicelevels_path, :class => 'btn' %>
+  </div>
+
+<% end %>

@@ -1,0 +1,36 @@
+<h1>Hardware Maintenance Contracts</h1>
+
+<%= link_to 'New Contract', new_hwservice_path %>
+<p />
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Ordernr</th>
+    <th>Subordernr</th>
+	<th>Description</th>
+    <th>Startdate</th>
+    <th>Validity</th>
+    <th>Valid until</th>
+    <th>Vendor</th>
+    <th></th>
+  </tr>
+
+<% @hwservices.each do |hwservice| %>
+  <tr>
+    <td><%= hwservice.ordernr %></td>
+    <td><%= hwservice.subordernr %></td>
+    <td><%= hwservice.desc %></td>
+    <td><%= hwservice.startdate %></td>
+    <td style="text-align: right"><%= hwservice.validity %></td>
+    <td><%= hwservice.validuntil %></td>
+    <td><%= hwservice.vendor_ident + " " + hwservice.vendor_name1%></td>
+    <td><%= link_to 'View', hwservice %></td>
+<!--    <td><%= link_to 'Edit', edit_hwservice_path(hwservice) %></td>
+    <td><%= link_to 'Destroy', hwservice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+-->
+	</tr>
+<% end %>
+</table>
+
+<br />
+

@@ -1,0 +1,33 @@
+<h1>Vendors</h1>
+
+<%= link_to 'New Vendor', new_vendor_path %>
+<p />
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Vendor</th>
+    <th>Name1</th>
+    <th>Name2</th>
+    <th>Street</th>
+    <th>Zip</th>
+    <th>Location</th>
+    <th>Nationality</th>
+    <th colspan="2">Actions</th>
+  </tr>
+
+<% @vendors.each do |vendor| %>
+  <tr>
+    <td><%= vendor.vendor_id %></td>
+    <td><%= vendor.name1 %></td>
+    <td><%= vendor.name2 %></td>
+    <td><%= vendor.street %></td>
+    <td><%= vendor.zip %></td>
+    <td><%= vendor.location %></td>
+    <td><%= vendor.nationality %></td>
+    <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+    <td><%= link_to 'Delete', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

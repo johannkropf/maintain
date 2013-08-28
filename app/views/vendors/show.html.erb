@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vendor:</b>
+  <%= @vendor.vendor_id %>
+</p>
+
+<p>
+  <b>Name1:</b>
+  <%= @vendor.name1 %>
+</p>
+
+<p>
+  <b>Name2:</b>
+  <%= @vendor.name2 %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @vendor.street %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @vendor.zip %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @vendor.location %>
+</p>
+
+<p>
+  <b>Nationality:</b>
+  <%= @vendor.nationality %>
+</p>
+
+
+<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
+<%= link_to 'Back', vendors_path %>

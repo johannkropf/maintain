@@ -1,0 +1,7 @@
+Anmeldung bei Postgresql
+User: postgres
+Passwort: Nadine19
+
+
+Dienst wird mit lokalem user gestartet (krj)
+

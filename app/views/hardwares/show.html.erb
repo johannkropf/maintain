@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @hardware.typehw %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @hardware.model %>
+</p>
+
+<p>
+  <b>Serialnr:</b>
+  <%= @hardware.serialnr %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @hardware.desc %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @hardware.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_hardware_path(@hardware) %> |
+<%= link_to 'Back', hardwares_path %>
