@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130723133911) do
+ActiveRecord::Schema.define(:version => 20130828122005) do
 
   create_table "hardwares", :force => true do |t|
     t.string   "typehw"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20130723133911) do
   create_table "servicelevels", :force => true do |t|
     t.string   "level"
     t.string   "short_desc"
-    t.string   "long_desc"
+    t.text     "long_desc"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
