@@ -7,3 +7,4 @@ Dienst wird mit lokalem user gestartet (krj)
 
 Webserver-Url:
 http://obscure-eyrie-8872.herokuapp.com/
+http://obscure-eyrie-8872.herokuapp.com/hwservices

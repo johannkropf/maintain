@@ -1,4 +1,8 @@
 Maintain::Application.routes.draw do
+  get "users/new"
+
+  match 'signup', to: 'users#new', via: 'get'
+
   get "static/about"
 
   resources :vendors
