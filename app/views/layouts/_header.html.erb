@@ -1,14 +1,14 @@
- <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+   <div class="navbar-header">
+     <div class="navbar-brand">
          <%= link_to "Maintenance", '#', id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Contracts",    hwservices_path %></li>
-             <!-- <li><%= link_to "Help",    '#' %></li> -->
-              <li><%= link_to "Sign in", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-  </header>
+     </div>
+   </div>
+
+   <div>
+     <ul class="nav navbar-nav">
+         <li><%= link_to "Contracts", hwservices_path %></li>
+         <li><%= link_to "Log in", login_path %></li>
+     </ul>
+   </div>
+</nav>

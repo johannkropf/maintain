@@ -9,7 +9,7 @@ development:
   database: dev_maintain_db 
   pool: 5
   username: postgres
-  password: Nadine19
+  password: postgres
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -21,7 +21,7 @@ test:
   database: test_maintain_db 
   pool: 5
   username: postgres
-  password: Nadine19
+  password: postgres
   host: localhost
 
 production:
@@ -30,5 +30,5 @@ production:
   database: prod_maintain_db 
   pool: 5
   username: postgres 
-  password: Nadine19 
+  password: postgres 
   host: localhost
