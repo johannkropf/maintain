@@ -23,6 +23,19 @@ ActiveRecord::Schema.define(:version => 20140211204906) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "hwservice", :id => false, :force => true do |t|
+    t.integer  "id",               :limit => 8, :null => false
+    t.datetime "issue_date"
+    t.string   "ordernr"
+    t.integer  "period_of_notice"
+    t.integer  "renewal_auto"
+    t.datetime "startdate"
+    t.string   "subordernr"
+    t.string   "vendor_id"
+    t.integer  "validity"
+    t.string   "descript"
+  end
+
   create_table "hwservicepositions", :force => true do |t|
     t.date     "start_date"
     t.date     "end_date"
@@ -47,6 +60,16 @@ ActiveRecord::Schema.define(:version => 20140211204906) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "desc"
+  end
+
+  create_table "play_evolutions", :id => false, :force => true do |t|
+    t.integer  "id",            :null => false
+    t.string   "hash",          :null => false
+    t.datetime "applied_at",    :null => false
+    t.text     "apply_script"
+    t.text     "revert_script"
+    t.string   "state"
+    t.text     "last_problem"
   end
 
   create_table "servicelevels", :force => true do |t|
