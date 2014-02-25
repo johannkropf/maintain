@@ -3,6 +3,8 @@ class VendorsController < ApplicationController
   before_filter :verify_session, :only => [:index, :show, :edit, :destroy, :create, :update, :new]
 
   def verify_session
+    puts "------> verify_session >#{session[:user_id]}<"
+
     unless session[:user_id]
       flash[:danger] = "You must log in to use this feature!"
       redirect_to :controller => 'sessions', :action => 'new'
